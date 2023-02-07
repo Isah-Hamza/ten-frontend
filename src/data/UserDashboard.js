@@ -39,9 +39,9 @@ export const sidebarList = [
     url: "/messages"
   },
   {
-    title: "Donation",
+    title: "Make Payment",
     icon: <img className="w-4 h-4 object-contain" src={donate} alt="donate" />,
-    url: "/donation"
+    url: "/make-payment"
   },
   // {
   //   title: "settings",

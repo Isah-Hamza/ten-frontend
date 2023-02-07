@@ -26,7 +26,6 @@ const Login = () => {
       .then((res) => {
         toast.success("Login successfull", { theme: "colored" });
         // window.localStorage.setItem(
-        //   "farcry_user",
         //   JSON.stringify(res?.data?.user)
         // );
         setLoggedInUser(res?.data?.user);
@@ -44,7 +43,7 @@ const Login = () => {
         autoComplete="new-password"
         className="h-[90%] px-5 sm:px-10 p-10 my-auto bg-[#cbccda] bg-opacity-75 flex flex-col justify-center"
       >
-        <p className="text-primaryBlue text-2xl font-bold">facry</p>
+        <p className="text-primaryBlue text-2xl font-bold">Ten Network</p>
         <div className="my-6">
           <p className="font-semibold text-2xl">Welcome Back!!</p>
           <p>Please enter your details</p>

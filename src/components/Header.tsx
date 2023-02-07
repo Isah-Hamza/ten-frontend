@@ -2,7 +2,7 @@ import { useState, useRef, useEffect, useContext } from "react";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { IoIosMenu, IoMdClose } from "react-icons/io";
 import bell from "../assets/images/bell.png";
-import suleiman from "../assets/images/suleiman.png";
+import suleiman from "../assets/images/profile.jpg";
 
 import { UsersContext } from "../contexts/Users";
 import { Dashboard } from "../contexts/Dashboard";
@@ -25,17 +25,7 @@ const Header = ({ dashboard }: HeaderProps) => {
   const links = [
     { name: "Home", to: "/" },
     { name: "Services", to: "/services" },
-    {
-      name: "Report",
-      to: "#",
-      subMenu: [
-        { text: "Emergency", to: "/report/emergency" },
-        { text: "Detailed Reporting", to: "/report/detailed-reporting" },
-        { text: "Support Group", to: "/report/support" },
-        { text: "FAQs", to: "/report/faq" }
-      ]
-    },
-    { name: "Prevention", to: "/prevention" },
+    { name: "Our Partners", to: "/prevention" },
     { name: "Contact Us", to: "/contact-us" },
     {
       name: JSON.stringify(loggedInUser) === "{}" ? "Login" : "Logout",
@@ -71,10 +61,10 @@ const Header = ({ dashboard }: HeaderProps) => {
   }, [location.pathname]);
 
   return (
-    <header className=" fixed top-0 left-0 shadow-md z-10  px-[5%] sm:px-[6%] bg-primaryBlue w-full">
+    <header className=" fixed top-0 left-0 shadow-md z-10  px-[5%] sm:px-[6%] bg-[coral] w-full">
       <div className="max-w-[1200px] mx-auto flex justify-between items-center text-white h-20  ">
         <div className="logo text-2xl font-bold">
-          <a href="/">farcry</a>
+          <a href="/">Ten Network</a>
         </div>
         <nav ref={navRef} className="fixed lg:static">
           <ul className="flex items-center space-x-8">
@@ -87,39 +77,11 @@ const Header = ({ dashboard }: HeaderProps) => {
                 key={idx}
               >
                 <NavLink to={item.to && item.to}>{item.name}</NavLink>
-                {item.subMenu && (
-                  <div
-                    ref={subMenuRef}
-                    className="shadow-md border-red-400 hidden group-hover:block lg:absolute top-6 -left-12 lg:pt-8 w-52 sm:w-60"
-                  >
-                    <ul className="flex flex-col sm:block gap-3 mt-3 lg:mt-[unset] ">
-                      {item.subMenu.map((menu, idx) => (
-                        <li
-                          onClick={() => {
-                            navigate(menu.to);
-                            navRef.current?.classList.remove("open");
-                            if (subMenuRef.current)
-                              subMenuRef.current.classList.add("hide");
-                            setTimeout(() => {
-                              subMenuRef.current &&
-                                subMenuRef.current.classList.remove("hide");
-                            }, 0);
-                          }}
-                          className=" text-sm hover:bg-primaryBlue hover:text-white text-black pl-6 lg:!px-10 py-2 whitespace-nowrap cursor-pointer bg-white bg-opacity-80"
-                          key={idx}
-                        >
-                          {" "}
-                          {menu.text}{" "}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
               </li>
             ))}
             {JSON.stringify(loggedInUser) === "{}" ? (
               <li onClick={() => navigate("/donate")}>
-                <button className="border border-gold rounded-md px-6 py-2">
+                <button className="border border-primaryBlue rounded-md px-6 py-2">
                   Donate
                 </button>
               </li>

@@ -40,14 +40,14 @@ li.active::before {
   left: 50%;
   transform: translateX(-50%);
   top: 27px;
-  @apply bg-gold;
+  @apply bg-primaryBlue;
 }
 li.active a {
-  @apply text-gold;
+  @apply text-primaryBlue font-semibold;
 }
 li:hover a,
 footer a:hover {
-  @apply text-gold;
+  @apply text-primaryBlue;
 }
 section {
   max-width: 1200px;

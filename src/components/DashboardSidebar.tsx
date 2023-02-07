@@ -77,7 +77,7 @@ const DashboardSidebar = ({ sidebarList }: Props) => {
       <aside
         className={`${
           isDashboardOpen ? "left-0" : "left-[-350px]"
-        } transition-all duration-500 fixed left-0 top-[80px] z-20 lg:static w-1/5 min-w-[300px] bg-primaryBlue text-white h-full`}
+        } transition-all duration-500 fixed left-0 top-[80px] z-20 lg:static w-1/5 min-w-[300px] bg-[coral] text-white h-full`}
       >
         <div className="flex gap-3 justify-center py-5">
           <img className="w-10 h-10 rounded-full" src={profile} alt="profile" />
@@ -103,7 +103,7 @@ const DashboardSidebar = ({ sidebarList }: Props) => {
                   item.title.toLowerCase().includes(activeTab.toLowerCase()) &&
                   "!font-bold translate-x-[7%] shadow-md !opacity-100"
                 } 
-                     opacity-80 transition-all duration-300 bg-primaryBlue cursor-pointer flex py-1 capitalize gap-3 items-center pl-20`}
+                     opacity-80 transition-all duration-300 bg-[tomato] cursor-pointer flex py-1 capitalize gap-3 items-center pl-20`}
               >
                 {item.icon}
                 <p>{item.title}</p>

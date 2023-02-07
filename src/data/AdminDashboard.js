@@ -13,6 +13,11 @@ export const sidebarList = [
     url: "/admin/dashboard",
   },
   {
+    title: "Administrator",
+    icon: <img className="w-4 h-4 object-contain" src={profile} alt="user" />,
+    url: "/admin/administrators",
+  },
+  {
     title: "Users",
     icon: <img className="w-4 h-4 object-contain" src={profile} alt="user" />,
     url: "/admin/users",

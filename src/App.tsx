@@ -24,6 +24,7 @@ import Report from "./pages/dashboard/Report";
 import UserDashboardReport from "./pages/dashboard/UserDashboardDonate";
 import Success from "./pages/Success";
 import { ToastContainer } from "react-toastify";
+import AdminAdmins from "./pages/admin/AdminAdmins";
 
 function App() {
   return (
@@ -53,10 +54,11 @@ function App() {
                 <Route path="/messages" element={<Messages />} />
                 <Route path="/admin/dashboard" element={<AdminDashboard />} />
                 <Route path="/admin/users" element={<AdminUsers />} />
+                <Route path="/admin/administrators" element={<AdminAdmins />} />
                 <Route path="/admin/partners" element={<AdminPartners />} />
                 <Route path="/admin/settings" element={<AdminSettings />} />
                 <Route path="/report" element={<Report />} />
-                <Route path="/donation" element={<UserDashboardReport />} />
+                <Route path="/make-payment" element={<UserDashboardReport />} />
                 <Route path="/success" element={<Success />} />
               </Routes>
             </main>

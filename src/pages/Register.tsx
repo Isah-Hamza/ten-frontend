@@ -88,7 +88,7 @@ const Register = () => {
         onSubmit={formik.handleSubmit}
         className="h-[90%] overflow-auto px-5 sm:px-10 p-10 my-auto bg-[#cbccda] bg-opacity-75"
       >
-        <p className="text-primaryBlue text-2xl font-bold">facry</p>
+        <p className="text-primaryBlue text-2xl font-bold">Ten Network</p>
         <div className="my-6">
           <p className="font-semibold text-xl ">Create Account</p>
           <p>Please enter your details</p>

@@ -169,7 +169,7 @@ const SelectedSupport = (props: IProps) => {
             <p className="font-semibold mb-2">About Request</p>
             <p className="text-sm">{support?.message}</p>
             <div className="mt-7">
-              <p className="font-semibold mb-2">Assigned Body</p>
+              <p className="font-semibold mb-2">Assigned volunteer</p>
               <p className="text-sm font-medium">
                 {" "}
                 Name: {support?.assigned_body?.name ?? "not assigned yet"}

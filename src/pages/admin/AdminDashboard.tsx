@@ -36,11 +36,11 @@ const AdminDashboard = () => {
   const requestStatus = ["pending", "completed", "Inconclusive"];
   const analytics = [
     {
-      name: "system users",
+      name: "beneficiaries",
       count: analyticsCount?.total_users
     },
     {
-      name: "partners",
+      name: "volunteers",
       count: analyticsCount?.total_parnters
     },
     {
@@ -133,7 +133,7 @@ const AdminDashboard = () => {
               <div>
                 <div className="mt-8 flex items-center justify-between pb-5 border-b">
                   <p className="text-xl font-semibold">
-                    Recent Support Requests
+                    Recent Beneficiaries Requests
                   </p>
                   <div className="flex items-center gap-2">
                     <select
@@ -188,10 +188,10 @@ const AdminDashboard = () => {
                               "2000-20-02"}
                           </td>
                           <td className="px-5 pt-4 pr-3">
-                            <button className="text-xs rounded px-4 py-2 text-white capitalize font-semibold w-fit bg-[coral]">
+                            <button className="min-w-[100px] text-xs rounded px-4 py-2 text-white capitalize font-semibold w-fit bg-[coral]">
                               {item.status ?? "None"}
                             </button>
-               ,           </td>
+                         </td>
                           <td className="pt-4">
                             <button
                               onClick={() => {
@@ -261,81 +261,6 @@ const AdminDashboard = () => {
               </div>
             </>
           ) : (
-            // <div className="flex flex-col">
-            //   <div className="border-b pb-3 flex items-center justify-between">
-            //     <button
-            //       onClick={toggleShowDetails}
-            //       className="flex items-center gap-2 py-3 px-2"
-            //     >
-            //       <FiArrowLeft />
-            //       <span className="text-base opacity-90 font-semibold">
-            //         /Bipasha/Request details
-            //       </span>
-            //     </button>
-            //     <button
-            //       onClick={handleShowStatus}
-            //       className="relative flex items-center gap-2 bg-blue-500 px-4 py-2 rounded text-white text-xs"
-            //     >
-            //       Change Request Status <AiOutlineCaretDown />{" "}
-            //       {showStatus && (
-            //         <div className="overflow-hidden w-full bg-blue-500 z-10 absolute top-10 left-0 rounded grid">
-            //           {requestStatus.map((status, idx) => (
-            //             <p
-            //               className="px-5 py-2.5 hover:bg-blue-700 text-left capitalize"
-            //               key={idx}
-            //             >
-            //               {status}
-            //             </p>
-            //           ))}
-            //         </div>
-            //       )}
-            //     </button>
-            //   </div>
-            //   <div className="max-w-3xl">
-            //     <div className="mt-7 flex items-center justify-between">
-            //       <p className="text-lg font-semibold">
-            //         Showing information for suppor request
-            //       </p>
-            //       <div className="flex items-center gap-3">
-            //         <button
-            //           onClick={() => {}}
-            //           className="text-xs w-full rounded px-5 py-1.5 text-white capitalize font-semibold bg-[coral]"
-            //         >
-            //           Pending
-            //         </button>{" "}
-            //         <button
-            //           onClick={() => {}}
-            //           className="text-xs w-full rounded px-5 py-1.5 text-white capitalize font-semibold bg-blue-500"
-            //         >
-            //           Assign
-            //         </button>
-            //       </div>
-            //     </div>
-            //     <div className="grid gap-10 grid-cols-[.8fr,.2fr] shadow p-5 rounded mt-5 items-start">
-            //       <div>
-            //         <p className="font-semibold mb-2">About Request</p>
-            //         <p className="text-sm">
-            //           elkirk College has eight campuses and learning centres
-            //           across the West Kootenay and Kootenay Boundary regions:
-            //           elkirk College has eight campuses and learning centres
-            //           across the West Kootenay and Kootenay Boundary regions:
-            //         </p>
-            //         <div className="mt-7">
-            //           <p className="font-semibold mb-2">Assigned Body</p>
-            //           <p>Majinte human rights law firm</p>
-            //         </div>
-            //         <div className="mt-10">
-            //           <p className="font-semibold mb-2">Attached Documents</p>
-            //           <button className="flex items-center gap-2 px-5 py-2 text-sm border border-current rounded text-primaryBlue">
-            //             <AiOutlineCloudDownload size={22} />
-            //             Download Attachement
-            //           </button>
-            //         </div>
-            //       </div>
-            //       <p className="mt-7 text-sm font-semibold">20/07/2023</p>
-            //     </div>
-            //   </div>
-            // </div>
             <SelectedSupport
               selectedSupport={selectedSupport}
               handleShowSuppportDetails={toggleShowDetails}

@@ -124,14 +124,14 @@ const Donate = () => {
                   <span className="font-semibold tracking-wider">
                     Name:
                   </span>{" "}
-                  Suleiman Abdullahi
+                  Lawrence Victor Aman
                 </p>
                 <p>
                   {" "}
                   <span className="font-semibold tracking-wider">
                     Address:
                   </span>{" "}
-                  Suleimsnsyd cresent 243 avenue
+                  48, Okada Road Bosso
                 </p>
                 <p>
                   {" "}

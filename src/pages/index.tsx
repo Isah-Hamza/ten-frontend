@@ -15,16 +15,16 @@ const Homepage = () => {
       <main className="pt-5 md:pt-10">
         <section className="first mb-20 px-[3%] lg:px-[5%] grid md:grid-cols-2 lg:flex justify-between">
           <div className="left md:pt-32">
-            <h2 className="text-2xl lg:text-4xl font-semibold mb-5">
-              Keeping you safe is our <br className="hidden lg:block" /> outmost
-              priority
+            <h2 className="text-2xl lg:text-4xl font-semibold mb-5 max-w-lg">
+              Ten Network craves to instill in you the habit of saving.
             </h2>
             <p className="text-lg text-center sm:text-left leading-tight mb-7">
-              Those who deny freedom to others deserve it not{" "}
-              <br className="hidden lg:block" /> for themselves.
+              We are a poverty alleviation and empowerment initiative{" "}
+              <br className="hidden lg:block" /> aimed at lifting over 10M
+              Nigerians from poverty.
             </p>
-            <button className="cursor-pointer flex items-center space-x-4 rounded-md px-7 py-3 bg-primaryBlue text-white">
-              <span>Get Support Now</span>
+            <button className="cursor-pointer flex items-center space-x-4 rounded-md px-5 py-2 bg-[coral] text-white">
+              <span>Join Today</span>
               <span className="text-2xl -mt-1">&rarr;</span>
             </button>
           </div>
@@ -33,7 +33,7 @@ const Homepage = () => {
           </div>
         </section>
         <section className="px-[5%] mb-20">
-          <h2 className="text-2xl font-bold mb-7">About Facry</h2>
+          <h2 className="text-2xl font-bold mb-7">About Ten Network</h2>
           <div className=" grid  md:grid-cols-2 lg:flex lg:space-x-20 items-center justify-center md:justify-start ">
             <div className="mb-6 md:mb-0">
               <img
@@ -44,13 +44,13 @@ const Homepage = () => {
             </div>
             <div className="max-w-[400px] ">
               <p>
-                Ullamco pariatur veniam eu nostrud. Dolor eiusmod occaecat
-                excepteur occaecat eiusmod elit ad pariatur sit eiusmod cillum
-                dolor aliquip. Do amet tempor sunt cillum nulla dolor labore
-                nisi consectetur. Deserunt tempor exercitation occaecat
-                consectetur fugiat. Ea nisi aliqua occaecat ndeserunt{" "}
+                We are a poverty alleviation and empowerment initiative aimed at
+                lifting over 10M Nigerians from poverty. and send over 5M
+                Children back to school and make 5M people breadwinner at the
+                end of 2030. The network started since 2020 and has since then
+                acheived 40% of its aim and objectives{" "}
               </p>
-              <button className="mt-6 flex items-center space-x-4 rounded-md px-10 py-3 bg-primaryBlue text-white">
+              <button className="mt-6 flex items-center space-x-4 rounded-md px-10 py-3 bg-[coral] text-white">
                 <span>Contact Us</span>
                 {/* <!-- <span className="text-2xl -mt-1" >
                             &rarr;

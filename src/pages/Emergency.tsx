@@ -28,7 +28,7 @@ export const CustomInput = ({
 }: CustomInputProps) => {
   return (
     <div className="flex items-end gap-3 border-b border-b-black pb-2">
-      <label className="text-sm font-medium" htmlFor="name">
+      <label className="whitespace-nowrap text-sm font-medium" htmlFor="name">
         {label}
       </label>
       <input
