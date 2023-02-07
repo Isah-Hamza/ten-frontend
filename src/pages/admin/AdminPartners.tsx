@@ -14,7 +14,7 @@ import { Error } from "../Emergency";
 import { ImSpinner2 } from "react-icons/im";
 import { trim } from "./AdminDashboard";
 import { IPartner } from "../../extra/types";
-
+import empty from "../../assets/images/no-data.png";
 
 const AdminPartners = () => {
   const [allPartners, setAllPartners] = useState([] as Array<IPartner>);
@@ -83,108 +83,120 @@ const AdminPartners = () => {
         <main className="w-full lg:w-4/5 bg-[#fff] h-full px-10 ">
           <div className="h-full flex flex-col">
             <div className="mt-8 flex items-center justify-between pb-5 border-b">
-              <p className="text-xl font-semibold">Our Amazing Partners</p>
+              <p className="text-xl font-semibold">Ten Network's Volunteers</p>
               <button
                 onClick={toggleAddPartner}
                 className="text-white bg-primaryBlue py-2 px-5 rounded text-sm"
               >
-                Add new Partner
+                Add new Volunteer
               </button>
             </div>
             <div className="max-w-4xl">
-              <>
-                {allPartners.filter((item) => item.partner_type === "law firm")
-                  .length > 0 && (
-                  <div>
-                    <p className="text-sm font-semibold mb-3 mt-5">Law Firms</p>
-                    {allPartners
-                      .filter((item) => item.partner_type === "law firm")
-                      .map((item, idx) => (
-                        <div
-                          key={idx}
-                          className="mb-3 items-center flex justify-between bg-[#fafaff] px-7 py-5"
-                        >
-                          <img
-                            className="h-7"
-                            src={mijenti}
-                            alt="alternative"
-                          />
-                          <div className="flex-1 mx-7">
-                            <p>{item.description}</p>
-                            <p className="font-medium">{item.email}</p>
-                          </div>
-                          <button className="text-white text-sm px-6 py-1.5 rounded bg-blue-500">
-                            View
-                          </button>
-                        </div>
-                      ))}
-                  </div>
-                )}
-                {allPartners?.filter(
-                  (item) => item.partner_type === "law enforcement agency"
-                ).length > 0 && (
-                  <div>
-                    <p className="text-sm font-semibold mb-3 mt-5">
-                      Law Enforcement Agency
-                    </p>
-                    {allPartners
-                      .filter(
-                        (item) => item.partner_type === "law enforcement agency"
-                      )
-                      .map((item, idx) => (
-                        <div
-                          key={idx}
-                          className="mb-3 flex items-center justify-between bg-[#fafaff] px-7 py-5"
-                        >
-                          <img
-                            className="h-7"
-                            src={mijenti}
-                            alt="alternative"
-                          />
+              {allPartners.length ? (
+                <>
+                  {allPartners.filter(
+                    (item) => item.partner_type === "law firm"
+                  ).length > 0 && (
+                    <div>
+                      <p className="text-sm font-semibold mb-3 mt-5">
+                        Law Firms
+                      </p>
+                      {allPartners
+                        .filter((item) => item.partner_type === "law firm")
+                        .map((item, idx) => (
+                          <div
+                            key={idx}
+                            className="mb-3 items-center flex justify-between bg-[#fafaff] px-7 py-5"
+                          >
+                            <img
+                              className="h-7"
+                              src={mijenti}
+                              alt="alternative"
+                            />
                             <div className="flex-1 mx-7">
-                            <p>{item.description}</p>
-                            <p className="font-medium">{item.email}</p>
+                              <p>{item.description}</p>
+                              <p className="font-medium">{item.email}</p>
+                            </div>
+                            <button className="text-white text-sm px-6 py-1.5 rounded bg-blue-500">
+                              View
+                            </button>
                           </div>
-                          <button className="text-white text-sm px-6 py-1.5 rounded bg-blue-500">
-                            View
-                          </button>
-                        </div>
-                      ))}
-                  </div>
-                )}
-                {allPartners.filter(
-                  (item) => item.partner_type === "health care agency"
-                ).length > 0 && (
-                  <div>
-                    <p className="text-sm font-semibold mb-3 mt-8">
-                      Health Care Agencies
-                    </p>
-                    {allPartners
-                      .filter(
-                        (item) => item.partner_type === "health care agency"
-                      )
-                      .map((item, idx) => (
-                        <div
-                          key={idx}
-                          className="mb-3 flex items-center justify-between bg-[#fafaff] px-7 py-5"
-                        >
-                          <img
-                            className="h-7"
-                            src={mijenti}
-                            alt="alternative"
-                          />
+                        ))}
+                    </div>
+                  )}
+                  {allPartners?.filter(
+                    (item) => item.partner_type === "law enforcement agency"
+                  ).length > 0 && (
+                    <div>
+                      <p className="text-sm font-semibold mb-3 mt-5">
+                        Law Enforcement Agency
+                      </p>
+                      {allPartners
+                        .filter(
+                          (item) =>
+                            item.partner_type === "law enforcement agency"
+                        )
+                        .map((item, idx) => (
+                          <div
+                            key={idx}
+                            className="mb-3 flex items-center justify-between bg-[#fafaff] px-7 py-5"
+                          >
+                            <img
+                              className="h-7"
+                              src={mijenti}
+                              alt="alternative"
+                            />
                             <div className="flex-1 mx-7">
-                            <p>{trim(item.description,70)}</p>
-                            <p className="font-medium">{item.email}</p>
+                              <p>{item.description}</p>
+                              <p className="font-medium">{item.email}</p>
+                            </div>
+                            <button className="text-white text-sm px-6 py-1.5 rounded bg-blue-500">
+                              View
+                            </button>
                           </div>
-                          <button className="text-white text-sm px-6 py-1.5 rounded bg-blue-500">
-                            View
-                          </button>
-                        </div>
-                      ))}
-                  </div>
-                )}
-              </>
+                        ))}
+                    </div>
+                  )}
+                  {allPartners.filter(
+                    (item) => item.partner_type === "health care agency"
+                  ).length > 0 && (
+                    <div>
+                      <p className="text-sm font-semibold mb-3 mt-8">
+                        Health Care Agencies
+                      </p>
+                      {allPartners
+                        .filter(
+                          (item) => item.partner_type === "health care agency"
+                        )
+                        .map((item, idx) => (
+                          <div
+                            key={idx}
+                            className="mb-3 flex items-center justify-between bg-[#fafaff] px-7 py-5"
+                          >
+                            <img
+                              className="h-7"
+                              src={mijenti}
+                              alt="alternative"
+                            />
+                            <div className="flex-1 mx-7">
+                              <p>{trim(item.description, 70)}</p>
+                              <p className="font-medium">{item.email}</p>
+                            </div>
+                            <button className="text-white text-sm px-6 py-1.5 rounded bg-blue-500">
+                              View
+                            </button>
+                          </div>
+                        ))}
+                    </div>
+                  )}
+                </>
+              ) : (
+                <div className="mt-20 grid place-content-center">
+                  <img className="w-64" src={empty} alt="empty" />
+                  <p className="text-center">No Volunteers added yet</p>
+                  <p className="font-semibold text-sm text-center">Add One</p>
+                </div>
+              )}
             </div>
           </div>
         </main>
@@ -200,7 +212,7 @@ const AdminPartners = () => {
               className="absolute right-4 top-4 cursor-pointer"
               onClick={toggleAddPartner}
             />
-            <p className="font-semibold text-lg">Add New Partner</p>
+            <p className="font-semibold text-lg">Add New Volunteer</p>
             <div className="flex flex-col mt-6">
               <label htmlFor="name">Name</label>
               <input
@@ -214,7 +226,7 @@ const AdminPartners = () => {
               )}
             </div>
             <div className="flex flex-col mt-4">
-              <label htmlFor="type">Partner Type</label>
+              <label htmlFor="type">Volunteer Category</label>
               <select
                 placeholder="name"
                 className=" w-[350px] p-3 py-2 rounded border outline-none"
@@ -243,7 +255,7 @@ const AdminPartners = () => {
                 )}
               </div>
               <div className="flex flex-col mt-4">
-                <label htmlFor="about">About Partner</label>
+                <label htmlFor="about">Description</label>
                 <textarea
                   placeholder="Enter more information about partner"
                   className=" w-[350px] p-3 py-2 rounded border outline-none"
@@ -266,7 +278,7 @@ const AdminPartners = () => {
                     className="min-w-[100px] mx-auto animate-spin"
                   />
                 ) : (
-                  "Add new Partner"
+                  "Create Volunteer"
                 )}
               </button>
             </div>

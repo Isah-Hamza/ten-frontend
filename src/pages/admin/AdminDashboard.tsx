@@ -106,7 +106,7 @@ const AdminDashboard = () => {
       <Header dashboard />
       <div className="flex-1 flex">
         <DashboardSidebar sidebarList={sidebarList} />
-        <main className="w-full lg:w-4/5 bg-[#fff] h-full py-8 px-10 ">
+        <main className="w-full lg:w-4/5 bg-[#fff] h-full py-8 px-10 flex flex-col">
           {!viewRequest ? (
             <>
               <div className="bg-[#f1f1ff] px-10 py-4 text-2xl font-bold">
@@ -130,7 +130,7 @@ const AdminDashboard = () => {
                   ))}
                 </div>
               )}
-              <div>
+              <div className='flex flex-col flex-1'>
                 <div className="mt-8 flex items-center justify-between pb-5 border-b">
                   <p className="text-xl font-semibold">
                     Recent Beneficiaries Requests
@@ -148,9 +148,9 @@ const AdminDashboard = () => {
                     <img src={filter} alt="fiter" />
                   </div>
                 </div>
-                <div className="mt-2 pb-5 border-b">
+                <div className="mt-2 mb-5 pb-5 border-b">
                   <table className="w-full">
-                    <thead>
+                    <thead> 
                       <tr>
                         {tableHeader.map((item, idx) => (
                           <th
@@ -208,7 +208,7 @@ const AdminDashboard = () => {
                     </tbody>
                   </table>
                 </div>
-                <div className="flex justify-between pt-3">
+                <div className="mt-auto flex justify-between pt-3">
                   <p className="text-sm">
                     Showing{" "}
                     <span className="font-semibold">
